@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import appStorePic from '/public/appstore.svg';
-import translationPic from '/public/translation.svg';
+import Translation from './translation.component';
 
 export default function NavBar() {
   return (
@@ -14,17 +14,21 @@ export default function NavBar() {
         </a>
       </h1>
       <div className="flex items-center gap-8 text-white font-semibold leading-[1.4]">
-        <p className="cursor-pointer">Partner Dashboard</p>
-        <div className="cursor-pointer flex items-center gap-1.5">
-          <Image src={translationPic} alt="image of translation" />
-          <p>English</p>
-        </div>
-        <Image
-          className="cursor-pointer"
-          src={appStorePic}
-          width={110}
-          alt="image of apple store"
-        />
+        <a href="">
+          <p>Partner Dashboard</p>
+        </a>
+        <Translation />
+        <a
+          href="https://apps.apple.com/tw/app/diverout-scuba-freediving/id6477954849"
+          target="_blank"
+        >
+          <Image
+            className="cursor-pointer"
+            src={appStorePic}
+            width={110}
+            alt="image of apple store"
+          />
+        </a>
       </div>
     </nav>
   );

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
-import './globals.css';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 const poetsenOne = localFont({
-  src: '../public/fonts/PoetsenOne-Regular.ttf',
+  src: '../../public/fonts/PoetsenOne-Regular.ttf',
   display: 'swap',
   variable: '--font-poetsen-one',
 });
@@ -49,7 +49,11 @@ export default function RootLayout({
           href="/favicon/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <link
+          rel="mask-icon"
+          href="/favicon/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
         <meta name="msapplication-TileColor" content="#da532c" />
       </head>
       <body className={`${inter.className} ${poetsenOne.variable}`}>
